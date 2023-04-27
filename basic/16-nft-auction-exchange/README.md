@@ -87,7 +87,7 @@ Env is already configured in **.sample.env** configuration, so you just need to 
 - Execute **script** under script
 
   ```
-  npx hardhat run scripts/auction-fix-price-script.js --network goerli
+  npx hardhat run scripts/auction-fix-price-script.js --network sepolia
   ```
 
 ## Refer to the link

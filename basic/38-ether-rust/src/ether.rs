@@ -51,7 +51,7 @@ async fn main() -> Result<()> {
     // A provider is an Ethereum JsonRPC client
     // let provider = Provider::try_from(ganache.endpoint())?.interval(Duration::from_millis(10));
     //    let provider = Provider::<Http>::try_from(
-    //     "https://goerli.infura.io/v3/783ca8c8e70b45e2b2819860560b8683").expect("could not instantiate HTTP Provider");
+    //     "https://sepolia.infura.io/v3/783ca8c8e70b45e2b2819860560b8683").expect("could not instantiate HTTP Provider");
     //     let provider = Provider::try_from(ganache.endpoint())?.interval(Duration::from_millis(10));
 
     // Generate a wallet of random numbers

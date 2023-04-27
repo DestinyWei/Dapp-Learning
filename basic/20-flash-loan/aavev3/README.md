@@ -25,10 +25,10 @@ cp .env.example .env
 
 - Start flashloan && mint flashLoan  
 ```shell
-npx hardhat run scripts/deploy_aavev3_flashloan.js --network goerli
+npx hardhat run scripts/deploy_aavev3_flashloan.js --network sepolia
 ```
 
 ## Reference link  
 - Detail of flash loan：https://docs.aave.com/developers/guides/flash-loans
 - V3 Testnet Addresses：https://docs.aave.com/developers/deployed-contracts/v3-testnet-addresses    
-- Get goerli Dai Token: https://goerli.etherscan.io/address/0xdf1742fe5b0bfc12331d8eaec6b478dfdbd31464 
+- Get sepolia Dai Token: https://sepolia.etherscan.io/address/0xdf1742fe5b0bfc12331d8eaec6b478dfdbd31464 

@@ -8,7 +8,7 @@ require("@nomiclabs/hardhat-etherscan");
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async () => {
   const accounts = await ethers.getSigners();
-  
+
   for (const account of accounts) {
     console.log(account.address);
   }
@@ -18,9 +18,9 @@ task("accounts", "Prints the list of accounts", async () => {
 // Go to https://hardhat.org/config/ to learn more
 
 function mnemonic() {
-  
+
   return process.env.PRIVATE_KEY
-  
+
 }
 
 /**
@@ -38,7 +38,7 @@ module.exports = {
       }
     ]
   },
-  
+
   networks: {
     localhost: {
       url: "http://localhost:8545",
@@ -48,8 +48,8 @@ module.exports = {
         (you can put in a mnemonic here to set the deployer locally)
       */
     },
-    goerli: {
-      url: "https://goerli.infura.io/v3/" + process.env.INFURA_ID, //<---- YOUR INFURA ID! (or it won't work)
+    sepolia: {
+      url: "https://sepolia.infura.io/v3/" + process.env.INFURA_ID, //<---- YOUR INFURA ID! (or it won't work)
       accounts: [
         mnemonic()
       ],

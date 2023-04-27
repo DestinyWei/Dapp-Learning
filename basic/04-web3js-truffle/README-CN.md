@@ -85,16 +85,16 @@ Writing artifacts to .\build\contracts
 5. 部署合约
 
 在 truffle-config.js 里面，可以配置 truffle 使用的以太网络，其中就包括 truffle test 使用的 "test" 网络。
-这里，直接执行 truffle migrate 报没有找到 test 网络，因为 truffle 不会启动内置的 test 网络。所以这里我们使用 goerli 进行 truffle 合约部署
+这里，直接执行 truffle migrate 报没有找到 test 网络，因为 truffle 不会启动内置的 test 网络。所以这里我们使用 sepolia 进行 truffle 合约部署
 
 ```bash
-truffle migrate --network goerli
+truffle migrate --network sepolia
 ```
 
 当多次执行 truffle migrate 的时候，可能会出 "Network update to date", 然后不执行合约部署的情况，这个时候需要执行如下的 truffle 命令
 
 ```bash
-truffle migrate --network goerli --reset
+truffle migrate --network sepolia --reset
 ```
 
 ## 在 infura 测试合约
@@ -104,7 +104,7 @@ sol 的测试文件会报失败。所以，这里我们连接到 infura 进行�
 
 
 ```bash
-truffle test ./test/simpletoken.js --network goerli
+truffle test ./test/simpletoken.js --network sepolia
 ```
 
 ## 在本地测试合约

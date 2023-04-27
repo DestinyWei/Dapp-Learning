@@ -84,7 +84,7 @@ gas 的平均价格超过 16 gwei 的话，那么 ETH 的通缩就会加速。
 
 > **NOTE**：如果自己不想跑节点的话，可以直接使用第三方的节点，比较知名的有三个：
 > [Infura][infura]，[Alchemy][alchemy] 和 [QuickNode][quicknode]。其中
-> Infura 支持主网和所有的测试网，但 Alchemy 只支持主网和 Goerli 测试网。更多
+> Infura 支持主网和所有的测试网，但 Alchemy 只支持主网和 sepolia 测试网。更多
 > 三方的节点供应商可到 https://ethereumnodes.com/ 查看。
 >
 > 如果想自己跑节点的话，现在也有集成的环境，[DappNode][dapp-node] 和 [Avado][avado]。

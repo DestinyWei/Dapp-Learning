@@ -86,11 +86,11 @@ module.exports = {
       gasPrice: 1000000000,
     },
     // 你可以在这里配置任意网络
-    // goerli 测试网络
-    goerli: {
+    // sepolia 测试网络
+    sepolia: {
       // 请将 INFURA_ID 替换成你自己的
-      // url: 'https://goerli.infura.io/v3/{INFURA_ID}',
-      url: 'https://goerli.infura.io/v3/' + process.env.INFURA_ID, //<---- 在.env文件中配置自己的INFURA_ID
+      // url: 'https://sepolia.infura.io/v3/{INFURA_ID}',
+      url: 'https://sepolia.infura.io/v3/' + process.env.INFURA_ID, //<---- 在.env文件中配置自己的INFURA_ID
 
       // 填写测试账户的私钥，可填写多个
       accounts: [process.env.PRIVATE_KEY, ...]
@@ -194,10 +194,10 @@ npx hardhat test ./test/Greeter.test.js
 npx hardhat run ./scripts/deploy.js
 ```
 
-指定运行的网络，例如在 goerli 测试网部署合约(请确保钱包地址在 goerli 测试网有足够的 gas 才能成功部署)
+指定运行的网络，例如在 sepolia 测试网部署合约(请确保钱包地址在 sepolia 测试网有足够的 gas 才能成功部署)
 
 ```sh
-npx hardhat run ./scripts/deploy.js --network goerli
+npx hardhat run ./scripts/deploy.js --network sepolia
 ```
 
 ### task
@@ -298,7 +298,7 @@ Changing greeting from 'Hello, world!' to 'hello Dapp-Learning!'
    npx hardhat run scripts/deploy.js --network <network-name>
    ```
 
-   这里的 `network-name` 替换成你指定的网络名称，这里可以换成 `goerli`，对应配置文件中的网络名称。
+   这里的 `network-name` 替换成你指定的网络名称，这里可以换成 `sepolia`，对应配置文件中的网络名称。
 
 ## 参考文档
 

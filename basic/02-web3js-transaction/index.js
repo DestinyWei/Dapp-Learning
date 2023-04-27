@@ -14,7 +14,7 @@ function sleep(ms) {
 */
 // Provider
 const providerRPC = {
-  development: 'https://goerli.infura.io/v3/' + process.env.INFURA_ID,
+  development: 'https://sepolia.infura.io/v3/' + process.env.INFURA_ID,
   moonbase: 'https://rpc.testnet.moonbeam.network',
 };
 const web3 = new Web3(providerRPC.development); //Change to correct network
@@ -64,6 +64,7 @@ const Trans = async () => {
     createTransaction.rawTransaction
   );
   console.log(`Contract deployed at address: ${createReceipt.contractAddress}`);
+  // Contract deployed at address: 0xFe3bb59414909964605125522CCDaD28a78C9b86 (sepolia测试网)
 
   const deployedBlockNumber = createReceipt.blockNumber;
 
@@ -88,6 +89,7 @@ const Trans = async () => {
 
   let number = await incrementer.methods.getNumber().call();
   console.log(`The current number stored is: ${number}`);
+  // The current number stored is: 5
 
   // Add 3 to Contract Public Variable
   console.log();
@@ -112,9 +114,11 @@ const Trans = async () => {
     incrementTransaction.rawTransaction
   );
   console.log(`Tx successful with hash: ${incrementReceipt.transactionHash}`);
+  // Tx successful with hash: 0x0b01e22204eb09902ee1b092dca7a98172178067be9d7872fb648b9cd440ed75
 
   number = await incrementer.methods.getNumber().call();
   console.log(`After increment, the current number stored is: ${number}`);
+  // After increment, the current number stored is: 8
 
   /*
    *
@@ -141,8 +145,10 @@ const Trans = async () => {
     resetTransaction.rawTransaction
   );
   console.log(`Tx successful with hash: ${resetcReceipt.transactionHash}`);
+  // Tx successful with hash: 0x92dc739529be7266c907b20098252189d90c4b9c4587cc0feed5a168119d394e
   number = await incrementer.methods.getNumber().call();
   console.log(`After reset, the current number stored is: ${number}`);
+  // After reset, the current number stored is: 0
 
   /*
    *
@@ -156,10 +162,10 @@ const Trans = async () => {
   console.log('============================ 5. Listen to Events');
   console.log(' Listen to Increment Event only once && continuouslly');
 
-  // goerli don't support http protocol to event listen, need to use websocket
+  // sepolia don't support http protocol to event listen, need to use websocket
   // more details , please refer to  https://medium.com/blockcentric/listening-for-smart-contract-events-on-public-blockchains-fdb5a8ac8b9a
   const web3Socket = new Web3(
-      'wss://goerli.infura.io/ws/v3/' + process.env.INFURA_ID
+    'wss://sepolia.infura.io/ws/v3/' + process.env.INFURA_ID
   );
 
   // listen to  Increment event only once
@@ -168,17 +174,17 @@ const Trans = async () => {
   });
 
   // listen to Increment event continuously
-  web3Socket.eth.subscribe('logs',{
+  web3Socket.eth.subscribe('logs', {
     address: createReceipt.contractAddress,
     topics: []
-  },(error,result) => {
-    if(error){
+  }, (error, result) => {
+    if (error) {
       console.error(error)
     }
   }
   ).on("data", (event) => {
-      console.log("New event: ", event);
-    })
+    console.log("New event: ", event);
+  })
     .on("error", (error) => {
       console.error("Error: ", error);
     });
@@ -197,7 +203,7 @@ const Trans = async () => {
 
     console.log("Waiting for events")
     await sleep(3000);
-    
+
     if (step == 2) {
       // clear all the listeners
       web3Socket.eth.clearSubscriptions();

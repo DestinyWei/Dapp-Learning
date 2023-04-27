@@ -33,8 +33,8 @@ const contractFile = tempFile.contracts['Incrementer.sol']['Incrementer'];
 const bytecode = contractFile.evm.bytecode.object;
 const abi = contractFile.abi;
 
-// Create web3 with goerli provider，you can change goerli to other testnet
-const web3 = new Web3('https://goerli.infura.io/v3/' + process.env.INFURA_ID);
+// Create web3 with sepolia provider，you can change sepolia to other testnet
+const web3 = new Web3('https://sepolia.infura.io/v3/' + process.env.INFURA_ID);
 
 // Create account from privatekey
 const account = web3.eth.accounts.privateKeyToAccount(privatekey);
@@ -67,9 +67,10 @@ const Deploy = async () => {
 
   const deployReceipt = await web3.eth.sendSignedTransaction(deployTransaction.rawTransaction);
 
-  // Your deployed contrac can be viewed at: https://goerli.etherscan.io/address/${deployReceipt.contractAddress}
-  // You can change goerli in above url to your selected testnet.
+  // Your deployed contrac can be viewed at: https://sepolia.etherscan.io/address/${deployReceipt.contractAddress}
+  // You can change sepolia in above url to your selected testnet.
   console.log(`Contract deployed at address: ${deployReceipt.contractAddress}`);
+  // Contract deployed at address: 0xeDfFFa82163269e6Be290231B9B8cfc4060747C0 (sepolia测试网)
 };
 
 // We recommend this pattern to be able to use async/await everywhere

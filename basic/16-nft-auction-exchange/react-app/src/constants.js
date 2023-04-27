@@ -335,13 +335,13 @@ export const NETWORKS = {
     blockExplorer: "https://ropsten.etherscan.io/",
     rpcUrl: `https://ropsten.infura.io/v3/${INFURA_ID}`,
   },
-  goerli: {
-    name: "goerli",
+  sepolia: {
+    name: "sepolia",
     color: "#0975F6",
     chainId: 5,
-    faucet: "https://goerli-faucet.slock.it/",
-    blockExplorer: "https://goerli.etherscan.io/",
-    rpcUrl: `https://goerli.infura.io/v3/${INFURA_ID}`,
+    faucet: "https://sepolia-faucet.slock.it/",
+    blockExplorer: "https://sepolia.etherscan.io/",
+    rpcUrl: `https://sepolia.infura.io/v3/${INFURA_ID}`,
   },
   xdai: {
     name: "xdai",

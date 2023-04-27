@@ -1,4 +1,4 @@
-// goerli testnet
+// sepolia testnet
 
 import { erc20ABI } from 'wagmi'
 

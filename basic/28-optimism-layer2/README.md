@@ -31,7 +31,7 @@ The smart contracts in the Optimism protocol can be separated into a few key com
 ### ETH cross-chain with Optimism gateway
 
 - Deposite ETH to Optimistic  
-  Optimism testnet links to Goerli testnet。 Before we send transactions to Optimistic， we need to deposite ETH to Optimistic first。  
+  Optimism testnet links to sepolia testnet。 Before we send transactions to Optimistic， we need to deposite ETH to Optimistic first。  
   Visit Optimism gateway，then choose "Deposite" ，and input ETH amount
 
 - Waiting for deposite finish  
@@ -62,22 +62,22 @@ Token address: 0x0d29e73F0b1AE67e28495880636e2407e41480F2
 
 - Deposite ETH to Optimism with script  
   In addition to do cross-chain through UI，we can also do it with script。  
-  In the following script，by calling cross-chain contract on Goerli side， ETH will be deposited to Optimism。
+  In the following script，by calling cross-chain contract on sepolia side， ETH will be deposited to Optimism。
 
 ```sh
-npx hardhat run scripts/deposit-eth.js --network goerli
+npx hardhat run scripts/deposit-eth.js --network sepolia
 
 ## It will takes about 5 minuts to finish the deposite，then it will add 0.0001 ETH to your account on Optimism side
 ```
 
-- Withdraw ETH to Goerli  
-  After deposite ETH to Optimism，we can also withdraw it back to Goerli.  
-  Similar to deposite，we just call cross-chain contract on Optimism side，ETH will be withdrawed to Goerli.
+- Withdraw ETH to sepolia  
+  After deposite ETH to Optimism，we can also withdraw it back to sepolia.  
+  Similar to deposite，we just call cross-chain contract on Optimism side，ETH will be withdrawed to sepolia.
 
 ```sh
 npx hardhat run scripts/withdraw-eth.js --network optimism
 
-## It will takes about 5 minuts to finish the withdraw，then it will add 0.0001 ETH to your account on Goerli side
+## It will takes about 5 minuts to finish the withdraw，then it will add 0.0001 ETH to your account on sepolia side
 ```
 
 ## References
@@ -87,5 +87,5 @@ npx hardhat run scripts/withdraw-eth.js --network optimism
 - Optimistic Rollup contracts: <https://medium.com/plasma-group/-ethereum-smart-contracts-in-l2-optimistic-rollup-2c1cef2ec537>
 - Optimism Rollup Principle Explanation : <https://zhuanlan.zhihu.com/p/350541979>
 - Optimism Cross Bridge : <https://gateway.optimism.io/>
-- Optimism Goerli deposite proxy contract : <https://goerli.etherscan.io/address/-0x636af16bf2f682dd3109e60102b8e1a089fedaa8#code>
-- Optimism Goerli withdraw proxy contract : <https://goerli-optimism.etherscan.io/-address/0x4200000000000000000000000000000000000010>
+- Optimism sepolia deposite proxy contract : <https://sepolia.etherscan.io/address/-0x636af16bf2f682dd3109e60102b8e1a089fedaa8#code>
+- Optimism sepolia withdraw proxy contract : <https://sepolia-optimism.etherscan.io/-address/0x4200000000000000000000000000000000000010>

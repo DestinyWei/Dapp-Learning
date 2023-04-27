@@ -29,7 +29,7 @@ yarn install
 设置 `starknet` 路径，即安装cairo环境的python venv路径
 
 - `cairo.version` 和 `cairo.venv` 两个字段只能出现一个，若设置version，则需要手动编译合约
-- `mocha.starknetNetwork` 设置为 alpha 将使用默认的starknet测试网配置 (alpha-goerli)，设置为devnet则需要本地运行starknet-dev-net作为本地测试网络
+- `mocha.starknetNetwork` 设置为 alpha 将使用默认的starknet测试网配置 (alpha-sepolia)，设置为devnet则需要本地运行starknet-dev-net作为本地测试网络
 
 ```ts
 // hardhat.config.js

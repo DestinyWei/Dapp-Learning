@@ -105,7 +105,7 @@ To create a production build, use yarn build.
 + 自动跳转到了Chrome，未登陆界面出现，和官网一致：
 
 ![hard-mode](images/local-homepage.png)
-+ 连接metamask钱包，试了几个网络，mainnet/rinkeby/kovan可以，Ropsten/Goerli不行。
++ 连接metamask钱包，试了几个网络，mainnet/rinkeby/kovan可以，Ropsten/sepolia不行。
 ![hard-mode](images/kovan.png)
 
 + 连接后和官网一致：

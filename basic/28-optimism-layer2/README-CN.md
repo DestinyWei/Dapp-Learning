@@ -29,7 +29,7 @@ Optimism协议中的智能合约可以分为几个关键组件
 ## 测试步骤
 
 - URI ETH 跨链  
-  Optimism 测试网络链接的是 goerli 网, 在 Optimistic 测试网路上进行交易前, 需要把 Goerli 网络的 ETH 经过跨链桥跨到 optimism.
+  Optimism 测试网络链接的是 sepolia 网, 在 Optimistic 测试网路上进行交易前, 需要把 sepolia 网络的 ETH 经过跨链桥跨到 optimism.
   访问 Optimism 的 gateway, 选择 "Deposite" , 在其中输入跨链的 ETH 数量
 
 - 等待资产跨链成功  
@@ -61,19 +61,19 @@ Token address: 0x0d29e73F0b1AE67e28495880636e2407e41480F2
   调用如下脚本, 通过调用合约的方式进行 ETH 跨链
 
 ```sh
-npx hardhat run scripts/deposit-eth.js --network goerli
+npx hardhat run scripts/deposit-eth.js --network sepolia
 
 ## 调用结束后, 等待大约 5 分钟, 就可以发现 metaMask 上, Optimism 网络上账户余额增加了 0.0001 ETH
 ```
 
-- 脚本 ETH 跨链到 Goerli 网络  
-  跨链到 Optimism 链上的 ETH 还可以跨回 Goerli 链.
+- 脚本 ETH 跨链到 sepolia 网络  
+  跨链到 Optimism 链上的 ETH 还可以跨回 sepolia 链.
   调用如下脚本, 通过调用合约的方式进行 ETH 跨链
 
 ```sh
 npx hardhat run scripts/withdraw-eth.js --network optimism
 
-## 调用结束后, 等待大约 5 分钟, 就可以发现 metaMask 上, goerli 网络上账户余额增加了 0.0001 ETH
+## 调用结束后, 等待大约 5 分钟, 就可以发现 metaMask 上, sepolia 网络上账户余额增加了 0.0001 ETH
 ```
 
 ## 参考文档
@@ -83,5 +83,5 @@ npx hardhat run scripts/withdraw-eth.js --network optimism
 - Optimistic Rollup 合约介绍: <https://medium.com/plasma-group/ethereum-smart-contracts-in-l2-optimistic-rollup-2c1cef2ec537>
 - Optimism Rollup 原理解析: <https://zhuanlan.zhihu.com/p/350541979>
 - Optimism 跨链桥: <https://gateway.optimism.io/>
-- Optimism Goerli deposite proxy contract : <https://goerli.etherscan.io/address/0x636af16bf2f682dd3109e60102b8e1a089fedaa8#code>
-- Optimism Goerli withdraw proxy contract : <https://goerli-optimism.etherscan.io/address/0x4200000000000000000000000000000000000010>
+- Optimism sepolia deposite proxy contract : <https://sepolia.etherscan.io/address/0x636af16bf2f682dd3109e60102b8e1a089fedaa8#code>
+- Optimism sepolia withdraw proxy contract : <https://sepolia-optimism.etherscan.io/address/0x4200000000000000000000000000000000000010>

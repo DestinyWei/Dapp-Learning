@@ -87,7 +87,7 @@ PRIVATE_KEY_TEST=zzzzz
 - 执行 script 下的脚本
 
   ```
-  npx hardhat run scripts/auction-fix-price-script.js --network goerli
+  npx hardhat run scripts/auction-fix-price-script.js --network sepolia
   ```
 
 ## 参考链接

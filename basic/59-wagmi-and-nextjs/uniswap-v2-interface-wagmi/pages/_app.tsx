@@ -17,7 +17,7 @@ const theme: DefaultTheme = {
 };
 
 const { chains, provider } = configureChains(
-  [chain.goerli],
+  [chain.sepolia],
   [
     alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
     publicProvider()

@@ -13,7 +13,7 @@ const receiver = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266';
 // Provider
 const web3 = new Web3(
   new Web3.providers.HttpProvider(
-    'https://goerli.infura.io/v3/' + process.env.INFURA_ID
+    'https://sepolia.infura.io/v3/' + process.env.INFURA_ID
   )
 );
 
@@ -62,6 +62,7 @@ const Trans = async () => {
     deployTransaction.rawTransaction
   );
   console.log(`Contract deployed at address: ${deployReceipt.contractAddress}`);
+  // Contract deployed at address: 0xb65543551Fda18c2773FC22F5F94c0d9fE8d3C62
 
   const erc20Contract = new web3.eth.Contract(
     abi,
@@ -93,6 +94,7 @@ const Trans = async () => {
     .call()
     .then((result) => {
       console.log(`The balance of receiver is ${result}`);
+      // The balance of receiver is 100000
     });
 };
 

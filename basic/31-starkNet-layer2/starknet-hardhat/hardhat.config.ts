@@ -11,7 +11,7 @@ const config: HardhatUserConfig = {
     // uses (my-venv) defined by `python -m venv path/to/my-venv`
     // venv: "path/to/my-venv"
     venv: "/home/usr/cairo_venv" // <-- put your dir
-    
+
     // uses the currently active Python environment (hopefully with available Starknet commands!) 
     // venv: "active"
   },
@@ -22,7 +22,7 @@ const config: HardhatUserConfig = {
   },
   mocha: {
     starknetNetwork: "devnet"   // 本地 starknet-dev-net 网络
-    // starknetNetwork: "alpha" // starknet alpha-goerli 测试网络
+    // starknetNetwork: "alpha" // starknet alpha-sepolia 测试网络
   }
 };
 

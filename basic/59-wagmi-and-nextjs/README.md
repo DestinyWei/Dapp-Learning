@@ -198,7 +198,7 @@ copy abi.json file from etherscan, put them in `abi/` folder, create `config/con
 
 ```ts
 // config/contractConfig.ts
-// goerli testnet
+// sepolia testnet
 
 import UniswapRouter2ABI from "../abi/UniswapRouter2ABI.json";
 import WETHABI from "../abi/WETHABI.json";

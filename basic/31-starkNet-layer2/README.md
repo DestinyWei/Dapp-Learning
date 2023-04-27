@@ -97,7 +97,7 @@ end
 命令行引入网络配置
 
 ```sh
-export STARKNET_NETWORK=alpha-goerli
+export STARKNET_NETWORK=alpha-sepolia
 ```
 
 部署合约命令

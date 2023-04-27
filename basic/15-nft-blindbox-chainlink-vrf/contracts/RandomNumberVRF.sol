@@ -7,8 +7,8 @@ import '@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol';
 import '@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol';
 
 contract RandomNumberVRF is VRFConsumerBaseV2 {
-    event FulfillRandomness(uint256,uint256[]);
-    event RequestId(address,uint256);
+    event FulfillRandomness(uint256, uint256[]);
+    event RequestId(address, uint256);
 
     VRFCoordinatorV2Interface COORDINATOR;
     LinkTokenInterface LINKTOKEN;
@@ -16,11 +16,11 @@ contract RandomNumberVRF is VRFConsumerBaseV2 {
     // Your subscription ID.
     uint64 s_subscriptionId;
 
-    // Goerli coordinator. For other networks,
+    // sepolia coordinator. For other networks,
     // see https://docs.chain.link/docs/vrf-contracts/#configurations
     address vrfCoordinator = 0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D;
 
-    // Goerli LINK token contract. For other networks,
+    // sepolia LINK token contract. For other networks,
     // see https://docs.chain.link/docs/vrf-contracts/#configurations
     address link = 0x326C977E6efc84E512bB9C30f76E30c160eD06FB;
 
@@ -59,15 +59,12 @@ contract RandomNumberVRF is VRFConsumerBaseV2 {
     function requestRandomWords() external onlyOwner {
         // Will revert if subscription is not set and funded.
         s_requestId = COORDINATOR.requestRandomWords(keyHash, s_subscriptionId, requestConfirmations, callbackGasLimit, numWords);
-        emit RequestId(msg.sender,s_requestId);
+        emit RequestId(msg.sender, s_requestId);
     }
 
-    function fulfillRandomWords(
-        uint256, /* requestId */
-        uint256[] memory randomWords
-    ) internal override {
+    function fulfillRandomWords(uint256 /* requestId */, uint256[] memory randomWords) internal override {
         s_randomWords = randomWords;
-        emit FulfillRandomness(s_requestId,s_randomWords);
+        emit FulfillRandomness(s_requestId, s_randomWords);
     }
 
     modifier onlyOwner() {

@@ -20,7 +20,7 @@ async fn main() -> Result<()> {
     // connect to the network
     let provider = Provider::<Http>::try_from(dotenv!("TARGET_NETWORK"))?
         .interval(Duration::from_millis(10u64));
-    // let provider1 = Provider::<Http>::try_from("https://goerli.infura.io/v3/783ca8c8e70b45e2b2819860560b8683")?.interval(Duration::from_millis(10u64));
+    // let provider1 = Provider::<Http>::try_from("https://sepolia.infura.io/v3/783ca8c8e70b45e2b2819860560b8683")?.interval(Duration::from_millis(10u64));
 
     // A provider is an Ethereum JsonRPC client
     // let provider = Provider::try_from(ganache.endpoint())?.interval(Duration::from_millis(10));

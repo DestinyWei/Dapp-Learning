@@ -9,7 +9,7 @@ import { RampInstantSDK } from "@ramp-network/ramp-instant-sdk";
   ~ What it does? ~
 
   Displays current ETH price and gives options to buy ETH through Wyre/Ramp/Coinbase
-                            or get through Rinkeby/Ropsten/Kovan/Goerli
+                            or get through Rinkeby/Ropsten/Kovan/sepolia
 
   ~ How can I use? ~
 

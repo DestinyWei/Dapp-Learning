@@ -4,36 +4,36 @@
 
 ## Addresses
 
-### Goerli
+### sepolia
 
 | Name                         | Type      | Address                                                                             |
 | ---------------------------- | --------- | ----------------------------------------------------------------------------------- |
-| Batcher Submitter            | EOA       | https://goerli.etherscan.io/address/0x7431310e026b69bfc676c0013e12a1a11411eec9      |
-| BatchInbox                   | EOA       | https://goerli.etherscan.io/address/0xff00000000000000000000000000000000000420      |
-| Proposer                     | EOA       | https://goerli.etherscan.io/address/0x02b1786A85Ec3f71fBbBa46507780dB7cF9014f6      |
-| Challenger                   | Multi-sig | https://goerli.etherscan.io/address/0xBc1233d0C3e6B5d53Ab455cF65A6623F6dCd7e4f      |
-| L2OutputOracle               | Contract  | https://goerli.etherscan.io/address/0xE6Dfba0953616Bacab0c9A8ecb3a9BBa77FC15c0      |
-| OptimismPortal               | Contract  | https://goerli.etherscan.io/address/0x5b47E1A08Ea6d985D6649300584e6722Ec4B1383      |
-| L1CrossDomainMessenger       | Contract  | https://goerli.etherscan.io/address/0x5086d1eef304eb5284a0f6720f79403b4e9be294      |
-| L1StandardBridge             | Contract  | https://goerli.etherscan.io/address/0x636af16bf2f682dd3109e60102b8e1a089fedaa8#code |
-| L1ERC721Bridge               | Contract  | https://goerli.etherscan.io/address/0x8DD330DdE8D9898d43b4dc840Da27A07dF91b3c9      |
-| OptimismMintableERC20Factory | Contract  | https://goerli.etherscan.io/address/0x883dcF8B05364083D849D8bD226bC8Cb4c42F9C5      |
-| SystemConfig                 | Contract  | https://goerli.etherscan.io/address/0xAe851f927Ee40dE99aaBb7461C00f9622ab91d60      |
-| SystemDictator               | Contract  | https://goerli.etherscan.io/address/0x1f0613A44c9a8ECE7B3A2e0CdBdF0F5B47A50971#code |
-| SystemDictator Owner         | Multi-sig | https://goerli.etherscan.io/address/0xBc1233d0C3e6B5d53Ab455cF65A6623F6dCd7e4f      |
+| Batcher Submitter            | EOA       | https://sepolia.etherscan.io/address/0x7431310e026b69bfc676c0013e12a1a11411eec9      |
+| BatchInbox                   | EOA       | https://sepolia.etherscan.io/address/0xff00000000000000000000000000000000000420      |
+| Proposer                     | EOA       | https://sepolia.etherscan.io/address/0x02b1786A85Ec3f71fBbBa46507780dB7cF9014f6      |
+| Challenger                   | Multi-sig | https://sepolia.etherscan.io/address/0xBc1233d0C3e6B5d53Ab455cF65A6623F6dCd7e4f      |
+| L2OutputOracle               | Contract  | https://sepolia.etherscan.io/address/0xE6Dfba0953616Bacab0c9A8ecb3a9BBa77FC15c0      |
+| OptimismPortal               | Contract  | https://sepolia.etherscan.io/address/0x5b47E1A08Ea6d985D6649300584e6722Ec4B1383      |
+| L1CrossDomainMessenger       | Contract  | https://sepolia.etherscan.io/address/0x5086d1eef304eb5284a0f6720f79403b4e9be294      |
+| L1StandardBridge             | Contract  | https://sepolia.etherscan.io/address/0x636af16bf2f682dd3109e60102b8e1a089fedaa8#code |
+| L1ERC721Bridge               | Contract  | https://sepolia.etherscan.io/address/0x8DD330DdE8D9898d43b4dc840Da27A07dF91b3c9      |
+| OptimismMintableERC20Factory | Contract  | https://sepolia.etherscan.io/address/0x883dcF8B05364083D849D8bD226bC8Cb4c42F9C5      |
+| SystemConfig                 | Contract  | https://sepolia.etherscan.io/address/0xAe851f927Ee40dE99aaBb7461C00f9622ab91d60      |
+| SystemDictator               | Contract  | https://sepolia.etherscan.io/address/0x1f0613A44c9a8ECE7B3A2e0CdBdF0F5B47A50971#code |
+| SystemDictator Owner         | Multi-sig | https://sepolia.etherscan.io/address/0xBc1233d0C3e6B5d53Ab455cF65A6623F6dCd7e4f      |
 
-### OP Bedrock on Goerli
+### OP Bedrock on sepolia
 
 | Name                          | Type       | Address                                                                                 |
 | ----------------------------- | ---------- | --------------------------------------------------------------------------------------- |
-| L1 Attribute Depositor        | EOA        | https://goerli-optimism.etherscan.io/address/0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001 |
-| L1Block                       | Pre-deploy | https://goerli-optimism.etherscan.io/address/0x4200000000000000000000000000000000000015 |
-| L2ToL1MessagePasser           | Pre-deploy | https://goerli-optimism.etherscan.io/address/0x4200000000000000000000000000000000000016 |
-| L2CrossDomainMessenger        | Pre-deploy | https://goerli-optimism.etherscan.io/address/0x4200000000000000000000000000000000000007 |
-| L2StandardBridge              | Pre-deploy | https://goerli-optimism.etherscan.io/address/0x4200000000000000000000000000000000000010 |
-| L2ERC721Bridge                | Pre-deploy | https://goerli-optimism.etherscan.io/address/0x4200000000000000000000000000000000000014 |
-| OptimismMintableERC20Factory  | Pre-deploy | https://goerli-optimism.etherscan.io/address/0x4200000000000000000000000000000000000012 |
-| OptimismMintableERC721Factory | Pre-deploy | https://goerli-optimism.etherscan.io/address/0x4200000000000000000000000000000000000017 |
+| L1 Attribute Depositor        | EOA        | https://sepolia-optimism.etherscan.io/address/0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001 |
+| L1Block                       | Pre-deploy | https://sepolia-optimism.etherscan.io/address/0x4200000000000000000000000000000000000015 |
+| L2ToL1MessagePasser           | Pre-deploy | https://sepolia-optimism.etherscan.io/address/0x4200000000000000000000000000000000000016 |
+| L2CrossDomainMessenger        | Pre-deploy | https://sepolia-optimism.etherscan.io/address/0x4200000000000000000000000000000000000007 |
+| L2StandardBridge              | Pre-deploy | https://sepolia-optimism.etherscan.io/address/0x4200000000000000000000000000000000000010 |
+| L2ERC721Bridge                | Pre-deploy | https://sepolia-optimism.etherscan.io/address/0x4200000000000000000000000000000000000014 |
+| OptimismMintableERC20Factory  | Pre-deploy | https://sepolia-optimism.etherscan.io/address/0x4200000000000000000000000000000000000012 |
+| OptimismMintableERC721Factory | Pre-deploy | https://sepolia-optimism.etherscan.io/address/0x4200000000000000000000000000000000000017 |
 
 Pre-deployed contracts are deployed in genesis block by directly setting the state DB: [https://github.com/ethereum-optimism/optimism/blob/c21476c1874702da8c0817d5c7c9de5b8066eb4b/op-chain-ops/genesis/setters.go#L226](https://github.com/ethereum-optimism/optimism/blob/c21476c1874702da8c0817d5c7c9de5b8066eb4b/op-chain-ops/genesis/setters.go#L226)
 

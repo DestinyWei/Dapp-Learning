@@ -11,10 +11,10 @@ async function main() {
   let lendingPoolProviderAddr, faucetAddr;
   let network = hre.hardhatArguments.network;
 
-  if (network === 'goerli'){
+  if (network === 'sepolia') {
     lendingPoolProviderAddr = '0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D';
     faucetAddr = '0x1ca525Cd5Cb77DB5Fa9cBbA02A0824e283469DBe';
-  }else{
+  } else {
     throw console.error(`Are you deploying to the correct network? (network selected: ${network})`);
   }
   const [deployer] = await ethers.getSigners();

@@ -44,8 +44,8 @@ module.exports = {
         (you can put in a mnemonic here to set the deployer locally)
       */
     },
-    goerli: {
-      url: 'https://goerli.infura.io/v3/' + process.env.INFURA_ID, //<---- YOUR INFURA ID! (or it won't work)
+    sepolia: {
+      url: 'https://sepolia.infura.io/v3/' + process.env.INFURA_ID, //<---- YOUR INFURA ID! (or it won't work)
       accounts: [mnemonic()],
     },
     mainnet: {

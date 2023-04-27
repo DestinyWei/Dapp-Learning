@@ -6,7 +6,7 @@ const MKR_WHALE = '0xdb33dfd3d61308c33c63209845dad3e6bfb2c674';
 const MKR_FISH = '0x2dfcedcb401557354d0cf174876ab17bfd6f4efd';
 const PRICE_FEED_ETH = '0xa5aA4e07F5255E14F02B385b1f04b35cC50bdb66';
 
-// Preset can be 'mainnet', 'kovan', 'rinkeby', 'goerli' or 'xdai'
+// Preset can be 'mainnet', 'kovan', 'rinkeby', 'sepolia' or 'xdai'
 // const config = { preset: 'kovan' };
 
 // Alternatively the rpcUrl and multicallAddress can be specified manually

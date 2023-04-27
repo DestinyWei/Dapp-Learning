@@ -101,7 +101,7 @@ brownie test
 ```sh
 ## 设置 INFURA 环境变量，其中 xxx 替换为真实的 INFURA_ID 后执行
 export WEB3_INFURA_PROJECT_ID=xxx
-brownie run *.py --network goerli
+brownie run *.py --network sepolia
 ```
 
 ## pytest

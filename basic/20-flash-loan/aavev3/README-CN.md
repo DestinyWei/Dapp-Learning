@@ -25,10 +25,10 @@ cp .env.example .env
 
 - 启动闪贷 && 借贷->铸币->还贷
 ```外壳
-npx hardhat scripts/deploy_aavev3_flashloan.js --network goerli
+npx hardhat scripts/deploy_aavev3_flashloan.js --network sepolia
 ```
 
 ## 参考链接
 - 闪贷文档：https://docs.aave.com/developers/guides/flash-loans
 - V3 测试网地址：https://docs.aave.com/developers/deployed-contracts/v3-testnet-addresses
-- 获取goerli Dai Token：https://goerli.etherscan.io/address/0xdf1742fe5b0bfc12331d8eaec6b478dfdbd31464
+- 获取sepolia Dai Token：https://sepolia.etherscan.io/address/0xdf1742fe5b0bfc12331d8eaec6b478dfdbd31464

@@ -84,11 +84,11 @@ module.exports = {
       gasPrice: 1000000000,
     },
     // you could config arbitrary network
-    // goerli testing network
-    goerli: {
+    // sepolia testing network
+    sepolia: {
       // place INFURA_ID to yours
-      // url: 'https://goerli.infura.io/v3/{INFURA_ID}',
-      url: 'https://goerli.infura.io/v3/' + process.env.INFURA_ID, //<---- 在.env文件中配置自己的INFURA_ID
+      // url: 'https://sepolia.infura.io/v3/{INFURA_ID}',
+      url: 'https://sepolia.infura.io/v3/' + process.env.INFURA_ID, //<---- 在.env文件中配置自己的INFURA_ID
 
       //  place multiple privateKeyX to yours
       accounts: [process.env.PRIVATE_KEY, ...]
@@ -194,10 +194,10 @@ Run the specified script. If you are not, it will run on hardhat's build-in netw
 npx hardhat run ./scripts/deploy.js
 ```
 
-Run the specified network, such as the contract deployed on goerli test network(make sure that the wallet could pay the gas)
+Run the specified network, such as the contract deployed on sepolia test network(make sure that the wallet could pay the gas)
 
 ```sh
-npx hardhat run ./scripts/deploy.js --network goerli
+npx hardhat run ./scripts/deploy.js --network sepolia
 ```
 
 ### Task
@@ -298,7 +298,7 @@ Changing greeting from 'Hello, world!' to 'hello Dapp-Learning!'
    npx hardhat run scripts/deploy.js --network <network-name>
    ```
 
-   `network-name` should be replaced with your networks, `goerli` is a choice which exists in the config file.
+   `network-name` should be replaced with your networks, `sepolia` is a choice which exists in the config file.
 
 ## Reference
 

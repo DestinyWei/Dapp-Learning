@@ -21,7 +21,7 @@ npx hardhat test
 - 部署
 
 ```shell
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 - 找到你的本地节点账户的私有 key 以及 token 地址，导入到 Metamask 中

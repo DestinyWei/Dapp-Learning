@@ -106,7 +106,7 @@ INFURA_ID = yyyyyyyy; // 替换为infura节点
 - 部署合约
 
   ```sh
-  npx hardhat run scripts/deploy.js  --network goerli
+  npx hardhat run scripts/deploy.js  --network sepolia
   ```
 
 ## TODO

@@ -7,8 +7,8 @@ const { ethers } = require('hardhat');
 const { FlashbotsBundleProvider } = require('@flashbots/ethers-provider-bundle');
 require('dotenv').config();
 
-function getPayLoad(contractABI, functionName, param, paramType){
-  for(let i = 0; i < contractABI.length; i++){
+function getPayLoad(contractABI, functionName, param, paramType) {
+  for (let i = 0; i < contractABI.length; i++) {
     const functionABI = contractABI[i];
     if (functionName != functionABI.name) {
       continue;
@@ -39,12 +39,12 @@ async function main() {
   console.log("Contract address:" , greeter.address); */
 
   // Config provider, the default is 
-  const provider = new ethers.providers.JsonRpcProvider({ url: 'https://goerli.infura.io/v3/' + process.env.INFURA_ID }, 5)
-  //const provider = new ethers.getDefaultProvider("goerli");
+  const provider = new ethers.providers.JsonRpcProvider({ url: 'https://sepolia.infura.io/v3/' + process.env.INFURA_ID }, 5)
+  //const provider = new ethers.getDefaultProvider("sepolia");
   // Standard json rpc provider directly from ethers.js. For example you can use Infura, Alchemy, or your own node.
 
   // Singer
-  const signerWallet = new ethers.Wallet(process.env.PRIVATE_KEY,provider);
+  const signerWallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
   const flashbotsProvider = await FlashbotsBundleProvider.create(provider, signerWallet);
   // Flashbots provider requires passing in a standard provider and an auth signer
@@ -52,7 +52,7 @@ async function main() {
   // Get the playload
   const greeterArtifact = await hre.artifacts.readArtifact("Greeter");
   const contractPayload = getPayLoad(greeterArtifact.abi, "setGreeting", "Hello Girls", ['string']);
-  
+
   const currentBlock = await provider.getBlockNumber();
   const targetBlockNumber = currentBlock + 2;
 
@@ -64,7 +64,7 @@ async function main() {
 
   // Config the transaction
   const contractTransaction = {
-    to: '0x87eCbC961193e833cB70B97E98053a76Ae458B94',  // Existing Greeter contract's address on goerli
+    to: '0x87eCbC961193e833cB70B97E98053a76Ae458B94',  // Existing Greeter contract's address on sepolia
     gasPrice: 200,
     data: contractPayload,
     nonce: userNonce
@@ -72,8 +72,8 @@ async function main() {
 
   const signedBundle = await flashbotsProvider.signBundle([
     {
-        signer: signerWallet,
-        transaction: contractTransaction
+      signer: signerWallet,
+      transaction: contractTransaction
     }
   ])
 
